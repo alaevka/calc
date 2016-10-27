@@ -7047,3 +7047,19 @@ hr + .mail-env {
 .file-drag-handle, .kv-file-zoom, .file-upload-indicator, .kv-file-upload {
   display: none;
 }
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #eeeeee;
+    border-color: #eeeeee; 
+}
+.grid-block {
+  margin-top: 20px;
+}
+.central-vert {
+  padding-top: 7px;
+}
+.total-price {
+  font-weight: bold;
+}
+.select2-container--krajee .select2-selection--single .select2-selection__rendered {
+    font-size: 12px;
+}

@@ -6,7 +6,7 @@
 use yii\helpers\Html;
 use app\assets\AppAsset;
 use yii\helpers\Url;
-
+use yii\web\View;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -227,7 +227,17 @@ AppAsset::register($this);
 		</footer>
 	</div>
 </div>
-    
+<?php if (Yii::$app->getSession()->hasFlash('flash_message')): ?>
+    <?=
+        $this->registerJs(
+            "
+            	toastr.info('".Yii::$app->getSession()->getFlash('flash_message')."');
+            ", 
+            View::POS_END, 
+            'flash_message'
+        );
+    ?>
+<?php endif; ?>   
 
 <?php $this->endBody() ?>
 </body>

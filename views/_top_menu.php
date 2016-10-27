@@ -37,4 +37,15 @@
 			<span class="hidden-xs">Пользователи системы</span>
 		</a>
 	</li>
+	<li class="dropdown <?php if($tab == 7) { ?>active<?php } ?>">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Настройки <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="<?= Url::to(['/options/index']) ?>">Основные настройки (курс валют, накрутки и тд.)</a>
+			</li>
+			<li>
+				<a href="<?= Url::to(['/material/index']) ?>">Список материалов</a>
+			</li>
+		</ul>
+	</li>
 </ul>
