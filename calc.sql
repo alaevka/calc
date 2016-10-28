@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 27 2016 г., 16:29
+-- Время создания: Окт 28 2016 г., 13:54
 -- Версия сервера: 5.6.26
 -- Версия PHP: 5.6.12
 
@@ -19,6 +19,71 @@ SET time_zone = "+00:00";
 --
 -- База данных: `calc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `calculation`
+--
+
+CREATE TABLE IF NOT EXISTS `calculation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `comment` text,
+  `material` int(11) DEFAULT NULL,
+  `product_surface_area` float DEFAULT NULL,
+  `wall_panel_surface_area` float DEFAULT NULL,
+  `cut_under_the_hob` int(11) DEFAULT NULL,
+  `cut_under_the_sink` int(11) DEFAULT NULL,
+  `cut_under_the_sink_type` int(11) DEFAULT NULL,
+  `skirting_type` int(11) DEFAULT NULL,
+  `skirting` float DEFAULT NULL,
+  `edge_type` int(11) DEFAULT NULL,
+  `edge_size` int(11) DEFAULT NULL,
+  `edge` int(11) DEFAULT NULL,
+  `hem` int(11) DEFAULT NULL,
+  `hem_size` int(11) DEFAULT NULL,
+  `radius_elements` int(11) DEFAULT NULL,
+  `product_and_wall_panel_install` int(11) DEFAULT NULL,
+  `shipment` int(11) DEFAULT NULL,
+  `washing` int(11) DEFAULT NULL,
+  `washing_type` int(11) DEFAULT NULL,
+  `protochka_stoka_vody` int(11) DEFAULT NULL,
+  `podstavka_goryachee` int(11) DEFAULT NULL,
+  `demontaj_izdelia` int(11) DEFAULT NULL,
+  `montaj_podokonnikov` int(11) DEFAULT NULL,
+  `podlojka_fanera` float DEFAULT NULL,
+  `kreplenia` int(11) DEFAULT NULL,
+  `hidden_cut_under_the_hob_for_one` float DEFAULT NULL,
+  `hidden_cut_under_the_sink_for_one` float DEFAULT NULL,
+  `hidden_skirting_for_one` float DEFAULT NULL,
+  `hidden_edge_for_one` float DEFAULT NULL,
+  `hidden_hem_for_one` float DEFAULT NULL,
+  `hidden_radius_elements_for_one` float DEFAULT NULL,
+  `hidden_product_and_wall_panel_install_for_one` float DEFAULT NULL,
+  `hidden_shipment_for_one` float DEFAULT NULL,
+  `hidden_washing_for_one` float DEFAULT NULL,
+  `hidden_protochka_stoka_vody_for_one` float DEFAULT NULL,
+  `hidden_podstavka_goryachee_for_one` float DEFAULT NULL,
+  `hidden_demontaj_izdelia_for_one` float DEFAULT NULL,
+  `hidden_montaj_podokonnikov_for_one` float DEFAULT NULL,
+  `hidden_podlojka_fanera_for_one` float DEFAULT NULL,
+  `hidden_kreplenia_for_one` float DEFAULT NULL,
+  `is_draft` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `calculation`
+--
+
+INSERT INTO `calculation` (`id`, `comment`, `material`, `product_surface_area`, `wall_panel_surface_area`, `cut_under_the_hob`, `cut_under_the_sink`, `cut_under_the_sink_type`, `skirting_type`, `skirting`, `edge_type`, `edge_size`, `edge`, `hem`, `hem_size`, `radius_elements`, `product_and_wall_panel_install`, `shipment`, `washing`, `washing_type`, `protochka_stoka_vody`, `podstavka_goryachee`, `demontaj_izdelia`, `montaj_podokonnikov`, `podlojka_fanera`, `kreplenia`, `hidden_cut_under_the_hob_for_one`, `hidden_cut_under_the_sink_for_one`, `hidden_skirting_for_one`, `hidden_edge_for_one`, `hidden_hem_for_one`, `hidden_radius_elements_for_one`, `hidden_product_and_wall_panel_install_for_one`, `hidden_shipment_for_one`, `hidden_washing_for_one`, `hidden_protochka_stoka_vody_for_one`, `hidden_podstavka_goryachee_for_one`, `hidden_demontaj_izdelia_for_one`, `hidden_montaj_podokonnikov_for_one`, `hidden_podlojka_fanera_for_one`, `hidden_kreplenia_for_one`, `is_draft`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 'первый тестовый заказ, выполнен на основе тестовых данных.', 1, 5, 6, 1, 1, 2, 2, 3, 2, 90, 2, 10, 80, 2, 1, 1, 2, 4, 1, 2, 3, 4, 5, 6, 758.36, 1061.71, 1365.06, 1677.7, 958.8, 4115.7, 24145.4, 2500, 7650, 1020, 2040, 3060, 4080, 5100, 6120, NULL, 1, 1477651588, 1477651588),
+(2, 'тк в advanced приложении в init миграции для created_at используется тип int', 3, 2, 0, 1, 1, 1, 1, 1, 1, 40, 1, 1, 40, 1, 0, 1, 1, 5, NULL, NULL, NULL, NULL, NULL, NULL, 758.36, 682.523, 606.696, 581.767, 479.4, 4115.7, 4390.08, 2500, 9180, 1020, 2040, 3060, 4080, 5100, 6120, NULL, 1, 1477651588, 1477651588),
+(3, 'Запуская наш проект в регионе, где часовой пояс был отличен от московского, мы столкнулись с проблемой разницы местного времени и времени сервера (московский часовой пояс). ', 1, 1, 1, 1, 1, 1, 1, 1, 1, 40, 1, 1, 40, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 758.36, 682.523, 606.696, 581.767, 479.4, 4115.7, 4829.09, 2500, 7650, 1020, 2040, 3060, 4080, 5100, 6120, NULL, 1, 1477651588, 1477651588),
+(4, 'Итак нам требовалось найти решение, не требующее масштабного переписывания кода и SQL запросов, поэтому варианты корректировать время в запросах или средствами PHP не выглядели удачными. ', 2, 1, 2, 1, 1, 1, 1, 0, 1, 40, 0, 0, 40, NULL, NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 758.36, 682.523, 606.696, 581.767, 479.4, 4115.7, 7024.13, 2500, 0, 1020, 2040, 3060, 4080, 5100, 6120, NULL, 1, 1477651588, 1477651588);
 
 -- --------------------------------------------------------
 
@@ -47,9 +112,9 @@ INSERT INTO `material` (`id`, `name`, `cost_price`, `plywood_glue_on_1mkv`, `che
 (5, 'Akrillika FH', 11.3854, 1000, 1),
 (6, 'Akrillika H (KA, DA)', 12.8185, 1000, 1),
 (7, 'Akrillika HI (KA, DA)', 13.3758, 1000, 1),
-(8, 'Apietra ', 7.16561, 1000, 1),
-(9, 'Apietra ', 7.72293, 1000, 1),
-(10, 'Apietra ', 8.51911, 1000, 1),
+(8, 'Apietra M1', 7.16561, 1000, 1),
+(9, 'Apietra M2', 7.72293, 1000, 1),
+(10, 'Apietra M3', 8.51911, 1000, 1),
 (11, 'Corian-1', 10.1115, 1000, 1),
 (12, 'Corian-2', 11.5446, 1000, 1),
 (13, 'Corian-3', 12.6592, 1000, 1),
@@ -144,7 +209,13 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 ('m161027_083451_add_cut_under_the_sink_fields_to_options_table', 1477557338),
 ('m161027_101329_add_skirting_fields_to_options_table', 1477563237),
 ('m161027_110754_add_edge_fields_to_options_table', 1477566510),
-('m161027_132057_add_radius_elements_to_options_table', 1477574483);
+('m161027_132057_add_radius_elements_to_options_table', 1477574483),
+('m161028_053420_add_install_fields_to_options_table', 1477632902),
+('m161028_061435_add_shipment_field_to_options_table', 1477635296),
+('m161028_063034_create_washing_table', 1477636989),
+('m161028_065959_create_washing_prices_table', 1477638086),
+('m161028_090018_add_six_fields_to_options_table', 1477648781),
+('m161028_101044_create_calculation_table', 1477649843);
 
 -- --------------------------------------------------------
 
@@ -168,6 +239,15 @@ CREATE TABLE IF NOT EXISTS `options` (
   `edge_type2` float DEFAULT NULL,
   `edge_type3` float DEFAULT NULL,
   `radius_elements` float DEFAULT NULL,
+  `product_install` float DEFAULT NULL,
+  `wall_panel_install` float DEFAULT NULL,
+  `shipment` float DEFAULT NULL,
+  `protochka_stoka_vody` float DEFAULT NULL,
+  `podstavka_goryachee` float DEFAULT NULL,
+  `demontaj_izdelia` float DEFAULT NULL,
+  `montaj_podokonnikov` float DEFAULT NULL,
+  `podlojka_fanera` float DEFAULT NULL,
+  `kreplenia` float DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -175,8 +255,8 @@ CREATE TABLE IF NOT EXISTS `options` (
 -- Дамп данных таблицы `options`
 --
 
-INSERT INTO `options` (`id`, `usd_current_value`, `cut_under_the_hob`, `wrapping_of_the_retail_price`, `cut_under_the_sink_type1`, `cut_under_the_sink_type2`, `cut_under_the_sink_type3`, `cut_under_the_sink_type4`, `cut_under_the_sink_type5`, `skirting_type1`, `skirting_type2`, `edge_type1`, `edge_type2`, `edge_type3`, `radius_elements`) VALUES
-(1, 70, 743.49, 2, 669.14, 1040.89, 2081.78, 2081.78, 2081.78, 594.8, 1338.29, 100.36, 594.8, 1338.28, 4035);
+INSERT INTO `options` (`id`, `usd_current_value`, `cut_under_the_hob`, `wrapping_of_the_retail_price`, `cut_under_the_sink_type1`, `cut_under_the_sink_type2`, `cut_under_the_sink_type3`, `cut_under_the_sink_type4`, `cut_under_the_sink_type5`, `skirting_type1`, `skirting_type2`, `edge_type1`, `edge_type2`, `edge_type3`, `radius_elements`, `product_install`, `wall_panel_install`, `shipment`, `protochka_stoka_vody`, `podstavka_goryachee`, `demontaj_izdelia`, `montaj_podokonnikov`, `podlojka_fanera`, `kreplenia`) VALUES
+(1, 70, 743.49, 2, 669.14, 1040.89, 2081.78, 2081.78, 2081.78, 594.8, 1338.29, 100.36, 594.8, 1338.28, 4035, 2152, 2152, 2500, 1000, 2000, 3000, 4000, 5000, 6000);
 
 -- --------------------------------------------------------
 
@@ -278,6 +358,62 @@ INSERT INTO `user` (`id`, `username`, `email`, `password_hash`, `auth_key`, `con
 (3, 'manager2', 'manager2@app.com', '$2y$10$UihD79uBTLzoaY.wbe/mveU44TfrO4phADZJFGvWoFprZI9dR1YPO', 'gw8YUdsL6MQBI4b_cJJ81o8xSAuAegGH', 1475576915, NULL, NULL, '127.0.0.1', 1475576915, 1475576915, 0),
 (5, 'partner1', 'partner1@app.com', '$2y$10$eAXYsKxJoeKpYsazomxXHOGc.WRRn1MlsdlH2QSfY68nJc3Bwrdpq', '_lY_2AkS2wFQKb_OWsZi6UVH_fcHDk0W', 1475576983, NULL, NULL, '127.0.0.1', 1475576983, 1475576983, 0),
 (6, 'partner2', 'partner2@app.com', '$2y$10$uc0dgRtQfnXZR9J9hs5RHOZGMWFBk4FIt1gvsSNM8zlTbXfZ./e6m', 'Qn-__fEq4wyka-bj20gex_3hjsLRWu0Q', 1475577009, NULL, NULL, '127.0.0.1', 1475577010, 1475577010, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `washing`
+--
+
+CREATE TABLE IF NOT EXISTS `washing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Дамп данных таблицы `washing`
+--
+
+INSERT INTO `washing` (`id`, `name`) VALUES
+(4, 'Omega 853'),
+(5, 'Omega 809');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `washing_prices`
+--
+
+CREATE TABLE IF NOT EXISTS `washing_prices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `washing_id` int(11) DEFAULT NULL,
+  `material_id` int(11) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `price_for_partners` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+
+--
+-- Дамп данных таблицы `washing_prices`
+--
+
+INSERT INTO `washing_prices` (`id`, `washing_id`, `material_id`, `price`, `price_for_partners`) VALUES
+(2, 3, 6666, 5666, 6666),
+(4, 4, 1, 5000, 7500),
+(5, 4, 2, 5000, 7500),
+(6, 4, 3, 5000, 7500),
+(7, 4, 4, 5000, 7500),
+(8, 4, 5, 5000, 7500),
+(9, 4, 6, 5000, 7500),
+(10, 4, 7, 5000, 7500),
+(11, 4, 8, 5000, 7500),
+(12, 5, 1, 6000, 9000),
+(13, 5, 2, 6000, 9000),
+(14, 5, 3, 6000, 9000),
+(15, 5, 4, 6000, 9000),
+(16, 5, 5, 6000, 9000),
+(17, 5, 6, 6000, 9000);
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

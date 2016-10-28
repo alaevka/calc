@@ -46,6 +46,9 @@
 			<li>
 				<a href="<?= Url::to(['/material/index']) ?>">Список материалов</a>
 			</li>
+			<li>
+				<a href="<?= Url::to(['/washing/index']) ?>">Список интегрированных моек</a>
+			</li>
 		</ul>
 	</li>
 </ul>

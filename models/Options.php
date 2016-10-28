@@ -26,7 +26,7 @@ class Options extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['usd_current_value', 'cut_under_the_hob', 'wrapping_of_the_retail_price', 'cut_under_the_sink_type1', 'cut_under_the_sink_type2', 'cut_under_the_sink_type3', 'cut_under_the_sink_type4', 'cut_under_the_sink_type5', 'skirting_type1', 'skirting_type2', 'edge_type1', 'edge_type2', 'edge_type3', 'radius_elements'], 'number'],
+            [['usd_current_value', 'cut_under_the_hob', 'wrapping_of_the_retail_price', 'cut_under_the_sink_type1', 'cut_under_the_sink_type2', 'cut_under_the_sink_type3', 'cut_under_the_sink_type4', 'cut_under_the_sink_type5', 'skirting_type1', 'skirting_type2', 'edge_type1', 'edge_type2', 'edge_type3', 'radius_elements', 'product_install', 'wall_panel_install', 'shipment', 'protochka_stoka_vody', 'podstavka_goryachee', 'demontaj_izdelia', 'montaj_podokonnikov', 'podlojka_fanera', 'kreplenia'], 'number'],
         ];
     }
 
@@ -50,8 +50,16 @@ class Options extends \yii\db\ActiveRecord
             'edge_type1' => 'Кромка стандартная, м.п., руб',
             'edge_type2' => 'Кромка фигурная, м.п., руб',
             'edge_type3' => 'Кромка антиперелив, м.п., руб',
-            'radius_elements' => 'Радиусные элементы (более 25мм), руб'
-
+            'radius_elements' => 'Радиусные элементы (более 25мм), руб',
+            'product_install' => 'Монтаж изделия, шт, руб',
+            'wall_panel_install' => 'Монтаж стеновой, шт, руб',
+            'shipment' => 'Доставка (c подъемом без лифта до 5 этажа), шт, руб',
+            'protochka_stoka_vody' => 'Проточка для стока воды, шт, руб',
+            'podstavka_goryachee' => 'Подставка под горячее, комплект, руб',
+            'demontaj_izdelia' => 'Демонтаж изделия (подоконник, столешница), шт, руб',
+            'montaj_podokonnikov' => 'Монтаж подоконников (шт./2м.п.), руб',
+            'podlojka_fanera' => 'Подложка из цельной фанеры, м.кв., руб',
+            'kreplenia' => 'Крепления, уголки, кронштейны, опоры, комплект, руб',
         ];
     }
 }

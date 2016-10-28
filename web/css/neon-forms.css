@@ -7063,3 +7063,6 @@ hr + .mail-env {
 .select2-container--krajee .select2-selection--single .select2-selection__rendered {
     font-size: 12px;
 }
+.field-calculation-hidden_washing_for_one, .field-calculation-hidden_shipment_for_one, .field-calculation-hidden_product_and_wall_panel_install_for_one, .field-calculation-hidden_radius_elements_for_one, .field-calculation-hidden_hem_for_one, .field-calculation-hidden_edge_for_one, .field-calculation-hidden_skirting_for_one, .field-calculation-hidden_cut_under_the_sink_for_one, .field-calculation-hidden_cut_under_the_hob_for_one, .field-calculation-hidden_protochka_stoka_vody_for_one, .field-calculation-hidden_podstavka_goryachee_for_one, .field-calculation-hidden_demontaj_izdelia_for_one, .field-calculation-hidden_montaj_podokonnikov_for_one, .field-calculation-hidden_podlojka_fanera_for_one, .field-calculation-hidden_kreplenia_for_one {
+  display: none;
+}

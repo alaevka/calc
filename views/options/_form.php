@@ -44,6 +44,25 @@
 
 <?= $form->field($model, 'radius_elements')->textInput() ?>
 
+<?= $form->field($model, 'product_install')->textInput() ?>
+
+<?= $form->field($model, 'wall_panel_install')->textInput() ?>
+
+<?= $form->field($model, 'shipment')->textInput() ?>
+
+
+<?= $form->field($model, 'protochka_stoka_vody')->textInput() ?>
+
+<?= $form->field($model, 'podstavka_goryachee')->textInput() ?>
+
+<?= $form->field($model, 'demontaj_izdelia')->textInput() ?>
+
+<?= $form->field($model, 'montaj_podokonnikov')->textInput() ?>
+
+<?= $form->field($model, 'podlojka_fanera')->textInput() ?>
+
+<?= $form->field($model, 'kreplenia')->textInput() ?>
+
 <div class="form-group">
     <div class="col-lg-offset-3 col-lg-9">
         <?= \yii\helpers\Html::submitButton('Сохранить изменения', ['class' => 'btn btn-blue']) ?><br>
